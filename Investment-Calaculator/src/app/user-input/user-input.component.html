@@ -1,0 +1,83 @@
+<form (ngSubmit)="onSubmit()">
+    <style>
+      input::placeholder {
+        color: #007bff; /* Blue placeholder text */
+        font-size: 16px;
+      }
+  
+      input {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #007bff; /* Blue border */
+        border-radius: 5px;
+        background-color: #e7f3ff; /* Light blue background */
+        color: #007bff; /* Blue text */
+      }
+  
+      input:focus {
+        outline: none;
+        border-color: #0056b3; /* Darker blue when input is focused */
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue shadow on focus */
+      }
+  
+      /* button { */
+        /* background-color: #007bff; Blue button */
+        /* color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px; */
+        /* cursor: pointer; */
+      /* } */
+  
+      button:hover {
+        background-color: #06bff7; /* Darker blue for hover effect */
+      }
+    </style>
+  
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 15px;">
+      <div>
+        <input id="intitial-investment" name="intitial-investment" type="number" placeholder="Initial Investment" [(ngModel)]="enteredInitialInvestment"/>
+      </div>
+      <div>
+        <input id="annual-investment" name="annual-investment" type="number" placeholder="Annual Investment" [(ngModel)]="enteredAnnualInvestment"/>
+      </div>
+      <div>
+        <input id="expected-return" name="expected-return" type="number" placeholder="Expected Return" [(ngModel)]="enteredExpectedReturn"/>
+      </div>
+      <div>
+        <input id="duration" name="duration" type="number" placeholder="Duration" [(ngModel)]="enterdDuration"/>
+      </div>
+    </div>
+    
+    <div style="text-align: center;">
+      <button type="submit">Calculate</button>
+    </div>
+  </form>
+  
+
+  <!-- <form>
+    <div class="input-group">
+      <p>
+        <label for ="initial-invesrment">Initial Investment</label>
+        <input id="initial-invesrment" type="number"/>
+      </p>
+      <p>
+        <label for ="annual-investment">Annual Investment</label>
+        <input id="annual-investment" type="number"/>
+      </p>
+    </div>
+    <div class="input-group">
+      <p>
+        <label for ="expected-return">Expected Return</label>
+        <input id="expected-return" type="number"/>
+      </p>
+      <p>
+        <label for ="duration"> Duration</label>
+        <input id="duration" type="number"/>
+      </p>
+    </div>
+    <p>
+      <button>Calaculate</button>
+    </p>
+  </form> -->

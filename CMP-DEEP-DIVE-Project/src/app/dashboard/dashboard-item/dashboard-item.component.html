@@ -1,0 +1,12 @@
+<div class="dashboard-item">
+    <article>
+        <header>
+            <!-- @Input it is decor -->
+          <img [src]="image.src" [alt]="image.alt" />  
+          <!-- input() it is s functon  -->
+          <!-- <img [src]="image().src" [alt]="image().alt" />  -->
+          <h2>{{title}}</h2>
+        </header>
+        <ng-content/>
+      </article>
+</div>
